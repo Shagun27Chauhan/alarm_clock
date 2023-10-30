@@ -1,0 +1,90 @@
+body{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    overflow-x: hidden;
+   
+}
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+
+}
+#alarm_clock{
+    box-shadow: inset 2px 2px 2px 2px gray;
+    width: 300px;
+    height: max-content;
+    margin: 0 auto;
+    padding: 50px 100px;  
+    text-align: center;
+    border-radius: 80px;
+}
+h1{
+    font-family: Cooper Black;
+    text-shadow: rgb(129, 184, 204) 5px 5px;
+}
+
+.img1{
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+    position: relative;
+    background-image: url("http://clipart-library.com/images_k/thinking-bubble-transparent/thinking-bubble-transparent-11.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px 10px;
+    z-index: 9999999999;
+}
+.img1 h2{
+    position: absolute;
+    margin-bottom: 300px;
+    text-align: center;
+    margin: 30px 10px;
+    font-size: 20px;  
+   
+}
+#input{
+    width: 20px;
+    border: 2px solid rgb(5, 67, 47);
+    margin-left: 80px;
+    margin-bottom: 10px;
+    display: none;
+    cursor: pointer;
+}
+#displayTime{
+    text-align: center;
+    font-size: 40px;
+    text-shadow: rgb(164, 207, 223) 5px 5px ;
+}
+#img{
+    height: 180px;
+    width: 180px;
+    cursor: pointer; 
+}
+img:hover{
+    transform: scale(0.9);
+}
+
+
+button{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin: 10px 5px;
+    border: none;
+    padding: 10px 10px;
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: inset 2px 2px 2px 2px rgb(169, 168, 168);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: inset 2px 2px 2px 2px rgb(145, 218, 240);
+    color: aqua;
+}

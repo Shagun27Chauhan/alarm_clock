@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Watch</title>
+     <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+   
+    <div id="alarm_clock">
+        <h1>Alarm Clock</h1>
+        <div id="displayTime">00:00</div>
+         <div class="img1">
+        <h2>Click me to set Alarm</h2></div>
+        <img src="https://www.pinclipart.com/picdir/big/178-1785326_clocks-clipart-blue-blue-clock-icon-png-download.png" alt="" id="img">
+        <input type="time" id="input">
+        <div id="rslt"></div>
+        <button onclick="setAlarm()">Start Alarm</button>
+        <button onclick="RemoveAlarm()" id="remove" >Remove Alarm</button>
+        <button onclick="stopAlarm()">Stop Alarm</button>
+        <audio id="Alarm_music" src="./mixkit-valley-sunset-127.mp3" ></audio>
+    </div>
+    <h3>All Rights are reserved by "Shagun Chauhan"</h3>
+
+    <script>
+        var music = document.getElementById("Alarm_music");
+        var display = document.getElementById("displayTime");
+        var rslt = document.getElementById("rslt");
+        var img = document.getElementById("img");
+        var remove = document.getElementById("remove");
+        var input = document.getElementById("input");
+        var timer = null;
+
+
+        function updateClock(){
+            let date = new Date();
+            let hours = date.getHours().toString().padStart(2, '0');
+            let minutes = date.getMinutes().toString().padStart(2, '0');
+            display.innerHTML = `${hours}:${minutes}`
+      
+
+            timer= setTimeout(updateClock, 1000); 
+
+            if(display.innerHTML===rslt.innerHTML){
+                music.play()
+            }
+            else{
+                music.pause()
+            }
+        }
+       
+ 
+        function setAlarm(){
+            let a = `${input.value}`
+            rslt.innerHTML = a;
+          
+        }
+        function stopAlarm(){
+           clearInterval(timer);
+           music.pause()
+        }
+       
+        function RemoveAlarm(){
+            location.reload();
+        }
+
+       
+       img.addEventListener("click",()=>{
+        input.style.display="block"
+       })
+
+        
+       
+        updateClock()
+
+    </script>
+
+
+</body>
+</html>
